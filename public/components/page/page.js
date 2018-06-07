@@ -1,5 +1,5 @@
 export default {
-	name:"YiPage",
+	name:"e-page",
 	data(){
 		return {
 

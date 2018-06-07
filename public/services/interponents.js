@@ -35,10 +35,8 @@ let install = Vue => {
                   let json = response.data;
 
                   if (json) {
-                    var errno = json.code;
-
-                    var msg = json.msg;
-
+                    var errno = json.meta?json.meta.errno:json.code;
+                    var msg = json.meta?json.meta.msg:json.msg;
                     response.data.errno = errno;
                     response.data.msg = msg;
                     if (response.data.result) {
@@ -58,7 +56,7 @@ let install = Vue => {
 
                     }
 
-                    if(Number(errno) === 200){
+                    if(Number(errno) === 200 || Number(errno) === 0){
 
                     }else if(/^d{4}401$/.test(errno)){ // TODO登录失效
 

@@ -101,7 +101,7 @@
                 border-right: 1px solid var(--color-border-common);
                 border-top:1px solid var(--color-border-common);
                 text-align: center;
-                padding: 0px;
+                padding: 5px;
                 a{
                     color: #4ab3fb;
                 }

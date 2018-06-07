@@ -30,6 +30,8 @@ var router = new VueRouter({
   routes: routerMap(Vue)
 }); 
 
+//接口前缀
+window.__interface = "/tongxiang";
 var store = new Vuex.Store(vuexMap(Vue));
 
 var App = new Vue({
@@ -39,8 +41,7 @@ var App = new Vue({
     return {
       crumbs: []
     };
-  },
-
+  }
 });
 
 router.beforeEach((to, from, next) => {

@@ -1,4 +1,4 @@
-推荐使用yarn
+传言管理系统
 
 ## 运行 npm run local
 ## 路由地址 business/router/index.js

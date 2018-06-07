@@ -21,8 +21,6 @@ extend(webpackConfig.output, {
   chunkFilename: '[name].js'
 });
 
-// let target = 'http://fe2.rongyi.com:8088';
-let target = 'http://fe1.rongyi.com:8088';
 
 webpackConfig.devServer = {
 	"host":"localhost",
@@ -30,7 +28,10 @@ webpackConfig.devServer = {
 	"historyApiFallback":true,
 	"stats":"errors-only",
 	"proxy":{
-
+    '^/tongxiang/**': {
+      target: "http://localhost:8099",
+      changeOrigin: true
+    }
 	}
 };
 
