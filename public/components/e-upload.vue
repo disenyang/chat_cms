@@ -181,7 +181,7 @@
         resultJsonPath:{
             type:String,
             name:"结果路径",
-            default:"result.data",
+            default:"result",
             desc:"结果路径,接口返回json的url路径"
         },
         splitChar:{

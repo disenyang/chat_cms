@@ -9,7 +9,7 @@
     "local": "webpack-dev-server --inline --hot --config ./build/webpack.site.local.js",
     "rd:upload": "gulp --gulpfile ./build/gulpfile.js upload",
     "rd:compile": "webpack --config ./build/webpack.site.rd.js -w",
-    "rd": "npm-run-all --parallel rd:compile rd:upload",
+    "rd": "npm-run-all --parallel rd:compile  rd:upload",
     "env": "webpack -p --config ./build/webpack.site.online.js --display-modules --progress && npm run rd:upload",
     "qa": "cnpm i && webpack --config ./build/webpack.site.qa.js --display-modules --display-error-details --sort-modules-by --progress",
     "pre_online": "webpack -p --config ./build/webpack.site.pre_online.js --display-modules --progress",

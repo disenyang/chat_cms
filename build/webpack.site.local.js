@@ -30,6 +30,7 @@ webpackConfig.devServer = {
 	"proxy":{
     '^/tongxiang/**': {
       target: "http://localhost:8099",
+      // target: "http://www.xiaowanwu.cn",
       changeOrigin: true
     }
 	}

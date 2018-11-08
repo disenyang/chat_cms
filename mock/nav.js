@@ -10,7 +10,7 @@ export var navData = [
   },
   {
     text: '项目',
-    icon: 'http://7xkce0.com1.z0.glb.clouddn.com/proWhite.png',
+    icon: 'http://u.xiaowanwu.cn/proWhite.png',
     iconSelected: 'http://img0.t.rongyi.com/123456789012345678901234/20171213/2adc30a8ca5da8e2266d74c772b98c8b.png',
     url: prefix('/project')
   },
@@ -22,7 +22,7 @@ export var navData = [
   },
   {
     text: '成员',
-    icon: 'http://7xkce0.com1.z0.glb.clouddn.com/team1.png',
+    icon: 'http://u.xiaowanwu.cn/team1.png',
     iconSelected: 'http://img0.t.rongyi.com/123456789012345678901234/20171213/2adc30a8ca5da8e2266d74c772b98c8b.png',
     url: prefix('/pagefolder')
   },

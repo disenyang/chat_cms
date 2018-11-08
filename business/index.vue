@@ -51,9 +51,67 @@
         	navs:[
                 {
                     name: '用户',
-                    icon: 'http://7xkce0.com1.z0.glb.clouddn.com/proWhite.png',
+                    icon: 'http://u.xiaowanwu.cn/proWhite.png',
                     iconSelected: 'http://img0.t.rongyi.com/123456789012345678901234/20171213/2adc30a8ca5da8e2266d74c772b98c8b.png',
                     url: '/cms_chat/userinfo'
+                },
+                {
+                    name: '发表',
+                    icon: 'http://u.xiaowanwu.cn/proWhite.png',
+                    iconSelected: 'http://img0.t.rongyi.com/123456789012345678901234/20171213/2adc30a8ca5da8e2266d74c772b98c8b.png',
+                    url: '/cms_chat/resource'
+                },
+                {
+                    name: '动画',
+                    icon: 'http://u.xiaowanwu.cn/proWhite.png',
+                    iconSelected: 'http://img0.t.rongyi.com/123456789012345678901234/20171213/2adc30a8ca5da8e2266d74c772b98c8b.png',
+                    showChildren:false,
+                    children:[
+                      {
+                        name: '类型',
+                        icon: 'http://u.xiaowanwu.cn/requirement.png',
+                        iconSelected: 'http://u.xiaowanwu.cn/requirement.png',
+                        url: '/cms_chat/animatetype'
+                      },
+                      {
+                        name: '形象',
+                        icon: 'http://u.xiaowanwu.cn/requirement.png',
+                        iconSelected: 'http://u.xiaowanwu.cn/requirement.png',
+                        url: '/cms_chat/figure'
+                      },
+                      {
+                        name: '模版',
+                        icon: 'http://u.xiaowanwu.cn/rep2.png',
+                        iconSelected: 'http://u.xiaowanwu.cn/rep2.png',
+                        url: '/cms_chat/figuretemplate'
+                      },
+                      {
+                        name: '模型',
+                        icon: 'http://u.xiaowanwu.cn/proWhite.png',
+                        iconSelected: 'http://img0.t.rongyi.com/123456789012345678901234/20171213/2adc30a8ca5da8e2266d74c772b98c8b.png',
+                        url: '/cms_chat/animatemodel'
+                      }
+                    ]
+                },
+                {
+                    name: '消息',
+                    icon: 'http://u.xiaowanwu.cn/proWhite.png',
+                    iconSelected: 'http://img0.t.rongyi.com/123456789012345678901234/20171213/2adc30a8ca5da8e2266d74c772b98c8b.png',
+                    showChildren:false,
+                    children:[
+      					      {
+      					        name: '聊天',
+      					        icon: 'http://u.xiaowanwu.cn/requirement.png',
+      					        iconSelected: 'http://u.xiaowanwu.cn/requirement.png',
+      					        url: '/cms_chat/chatmessage'
+      					      },
+      					      {
+      					        name: '系统',
+      					        icon: 'http://u.xiaowanwu.cn/rep2.png',
+      					        iconSelected: 'http://u.xiaowanwu.cn/rep2.png',
+      					        url: '/cms_chat/workrecord'
+      					      }
+                    ]
                 }
             ]
         }
@@ -68,12 +126,18 @@
     created(){
       	if(this.routerName!="login" && this.routerName!="register"){
         	let userinfo = window.localStorage.getItem("userinfo");
-        	if(!userinfo){
-          		window.top.location = "http://localhost:8000/cms_chat/login";
-        	}else{
-          		window.userinfo = JSON.parse(userinfo);         
-          		this.userinfo = window.userinfo;
+        	try{
+        		if(!userinfo){
+	          		window.top.location = "http://localhost:8000/cms_chat/login";
+	        	}else{
+	          		window.userinfo = JSON.parse(userinfo);         
+	          		this.userinfo = window.userinfo;
+	        	}
+        	}catch(e){
+        		console.error(e);
+        		window.top.location = "http://localhost:8000/cms_chat/login";
         	}
+        	
         }else{
         	
         }    
@@ -91,5 +155,7 @@
 </script>
 <style>
     @import '../public/styles/var.css';
-	
+	body{
+		min-width: 1200px;
+	}
 </style>

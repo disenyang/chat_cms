@@ -72,11 +72,11 @@
       <e-column align="center" title="性别" relate="sex">
         <e-label slot-scope="props" color="#666" :label="props.line.sex"></e-label>
       </e-column>
+      <e-column align="center" title="状态" relate="sex">
+        <e-label slot-scope="props" color="#666" :label="props.line.status==0?'平台':'临时'"></e-label>
+      </e-column>
       <e-column align="center" title="签名" relate="signname">
         <e-label slot-scope="props" color="#666" :label="props.line.signname"></e-label>
-      </e-column>
-      <e-column align="center" title="设备token" relate="deviceToken">
-        <e-label slot-scope="props" color="#666" :label="props.line.deviceToken"></e-label>
       </e-column>
       <e-column align="center" title="客户端系统类型" relate="clientostype">
         <e-label slot-scope="props" color="#666" :label="props.line.clientostype"></e-label>
@@ -93,6 +93,7 @@
           </e-router-link>
           <e-button type="text" @click="del($event, props.line.id)" label="删除">
           </e-button>
+          
         </e-container>
       </e-column>
     </e-table>

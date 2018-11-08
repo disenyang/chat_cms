@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-let moduleName = 'yilan';
+let moduleName = 'cms_chat';
 let staticName = `static_${moduleName}`;
 const fs = require('fs');
 var execSync = require('child_process').execSync;

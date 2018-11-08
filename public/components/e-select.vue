@@ -188,6 +188,8 @@
 }
 .e-selects{
     margin:10px 0;
+    max-height: 300px;
+    overflow: auto;
     position:absolute;
     box-sizing:border-box;
     background-color:#fff;

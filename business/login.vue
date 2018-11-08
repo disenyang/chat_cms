@@ -81,7 +81,8 @@
                 .then((response) => {
                     let json = response.data;
                      if (json.meta.errno==0) {
-                        let userinfo = json.data;
+                        let userinfo = json.result;
+                        console.log("userinfo",userinfo);
                         window.localStorage.setItem("userinfo",JSON.stringify(userinfo));
                         this.$router.push({name:"home"});
                     }else{

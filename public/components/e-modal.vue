@@ -117,7 +117,7 @@
         border:1px solid #aaa;
         border-radius:3px;
         .e-modal-header{
-            height:0px;
+            height:40px;
             line-height:50px;
             font-size:16px;
             position:relative;

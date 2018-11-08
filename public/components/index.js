@@ -27,6 +27,7 @@ import eimg from "./e-img.vue"
 import etip from "./e-tip.vue"
 import echeckbox from "./e-checkbox.vue"
 import einput from "./e-input.vue"
+import ecanvas from "./e-canvas.vue"
 
 import eLoading from "./eLoading.js"
 import eConfirm from "./eConfirm.js"
@@ -100,5 +101,7 @@ export default {
 		Object.assign(Vue.prototype, {eLoading: eLoading});
 		Object.assign(Vue.prototype, {eConfirm: eConfirm});
 		Object.assign(Vue.prototype, {eMessage: eMessage});
+		// Object.assign(Vue.prototype, {emodal: emodal});
+		
 	}
 };
